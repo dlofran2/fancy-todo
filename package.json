@@ -49,8 +49,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js && mv build/index.html build/200.html",
     "test": "node scripts/test.js --env=jsdom",
-    "deploy": "surge --domain fancy-lookup.surge.sh --project /Users/dominic/Documents/Github/fancy-todo/build/",
-    "publish": "react-scripts build && mv build/index.html build/200.html && surge --domain fancy-todo.surge.sh --project /Users/dominic/Documents/Github/fancy-todo/build/"
+    "deploy": "surge --domain fancy-todos.surge.sh --project /Users/dominic/Documents/Github/fancy-todo/build/",
+    "publish": "node scripts/build.js && mv build/index.html build/200.html && surge --domain fancy-todos.surge.sh --project /Users/dominic/Documents/Github/fancy-todo/build/"
   },
   "jest": {
     "collectCoverageFrom": [
