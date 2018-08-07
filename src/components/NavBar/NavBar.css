@@ -1,0 +1,61 @@
+.navBarContainer {
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  justify-content: center;
+  align-items: center;
+
+  border-top: 1px solid #ccc;
+  margin-top: 3em;
+  height: 6em;
+}
+
+.navBarButton {
+  border: 0;
+  border-right: 1px solid #ccc;
+
+  background-color: #fff;
+  margin-top: 1em;
+}
+
+.navBarButton:hover {
+  outline: none;
+}
+
+.navBarButton:focus {
+  outline: none;
+}
+
+.navBarButton:active {
+  transform: translateY(-2px);
+}
+
+.navBarButton:last-of-type {
+  border: 0;
+}
+
+.navBarHome {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.navBarTemp1 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.navBarSettings {
+  grid-column-start: 9;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.navImage {
+  height: 40px;
+  width: 40px;
+}

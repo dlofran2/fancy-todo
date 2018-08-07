@@ -1,0 +1,50 @@
+.gridParent {
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.logoGridChild {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+  margin: 3em 0 0 2em;
+}
+
+.routeTitleGridChild {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 2;
+
+  margin-top: 3em;
+}
+
+.addButtonGridChild {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 3;
+  grid-row-end: 3;
+
+  margin-top: 4em;
+}
+
+.miniTodoContainerGridChild {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 4;
+  grid-row-end: 4;
+
+  overflow-x: auto;
+  white-space: nowrap;
+
+  margin-top: 4em;
+}
+
+.navBarGridChild {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+}

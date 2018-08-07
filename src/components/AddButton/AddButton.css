@@ -1,0 +1,47 @@
+.addButtonContainer {
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.addButton {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 50px;
+
+  padding: 0;
+  margin: 0 9.25px;
+
+  grid-column-start: 6;
+  grid-column-end: 8;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.addButton:active {
+  transform: translateY(-1px);
+  border-radius: 10px;
+}
+
+.addButton:focus {
+  outline: none;
+}
+
+.addButton:hover {
+  outline: none;
+}
+
+.addText {
+  text-align: center;
+  color: #ccc;
+
+  margin-top: 15px;
+
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
