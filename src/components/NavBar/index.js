@@ -5,7 +5,7 @@ import home from '../../assets/home.svg';
 import temp1 from '../../assets/gift.svg';
 import temp2 from '../../assets/layers.svg';
 
-import './NavBar.css';
+import styles from './NavBar.scss';
 
 class NavBar extends Component {
   goToHomeRoute = () => {
@@ -22,24 +22,27 @@ class NavBar extends Component {
 
   render() {
     return (
-      <nav className="navBarContainer">
+      <nav className={styles.container}>
         <button
-          className={classNames('navBarHome', 'navBarButton')}
+          className={classNames(styles.navBarButton, styles.navBarButtonHome)}
           onClick={this.goToHomeRoute}
         >
-          <img src={home} alt="Home" className="navImage" />
+          <img src={home} alt="Home" className={styles.navImage} />
         </button>
         <button
-          className={classNames('navBarTemp1', 'navBarButton')}
+          className={classNames(styles.navBarButton, styles.navBarButtonTemp1)}
           onClick={this.goToTemp1Route}
         >
-          <img src={temp1} alt="Temp1" className="navImage" />
+          <img src={temp1} alt="Temp1" className={styles.navImage} />
         </button>
         <button
-          className={classNames('navBarSettings', 'navBarButton')}
+          className={classNames(
+            styles.navBarButton,
+            styles.navBarButtonSettings,
+          )}
           onClick={this.goToSettingsRoute}
         >
-          <img src={temp2} alt="Settings" className="navImage" />
+          <img src={temp2} alt="Settings" className={styles.navImage} />
         </button>
       </nav>
     );

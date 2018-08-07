@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './App.css';
 import TaskListContainer from './containers/TaskListContainer';
 
 class App extends Component {

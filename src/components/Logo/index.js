@@ -1,8 +1,8 @@
 import React from 'react';
 
 import logo from '../../assets/layers.svg';
-import './Logo.css';
+import styles from './Logo.scss';
 
-const Logo = () => <img src={logo} className="logo" role="presentation" />;
+const Logo = () => <img src={logo} className={styles.logo} alt="" />;
 
 export default Logo;
