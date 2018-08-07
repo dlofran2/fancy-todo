@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import MiniTodoWrapper from '../../components/MiniTodoWrapper';
 
-import './MiniTodoContainer.css';
+import styles from './MiniTodoContainer.scss';
 
 class MiniTodoContainer extends Component {
   render() {
@@ -15,7 +15,7 @@ class MiniTodoContainer extends Component {
       'eat pie',
     ];
     return (
-      <div className="miniTodoContainerContainer">
+      <div className={styles.miniTodoContainerContainer}>
         <MiniTodoWrapper title={'Trip to YYC'} todos={calgaryTodos} />
         <MiniTodoWrapper title={'Trip to YYC'} todos={calgaryTodos} />
         <MiniTodoWrapper title={'Trip to YYC'} todos={calgaryTodos} />

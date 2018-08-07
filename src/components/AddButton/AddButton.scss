@@ -1,4 +1,4 @@
-.addButtonContainer {
+.container {
   display: grid;
   grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
@@ -19,22 +19,22 @@
   grid-column-end: 8;
   grid-row-start: 1;
   grid-row-end: 1;
+
+  &:active {
+    transform: translateY(-1px);
+    border-radius: 10px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    outline: none;
+  }
 }
 
-.addButton:active {
-  transform: translateY(-1px);
-  border-radius: 10px;
-}
-
-.addButton:focus {
-  outline: none;
-}
-
-.addButton:hover {
-  outline: none;
-}
-
-.addText {
+.text {
   text-align: center;
   color: #ccc;
 

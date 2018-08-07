@@ -1,4 +1,4 @@
-.miniTodoContainer {
+.container {
   background-color: dodgerblue;
   border: 1px solid dodgerblue;
   border-radius: 6px;
@@ -10,9 +10,9 @@
   grid-template-rows: fit-content(1%);
 }
 
-.miniTodoTitle {
+.title {
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.2px;
@@ -30,9 +30,6 @@
 }
 
 .miniTodoList {
-  margin: 0;
-  padding: 0;
-
   grid-column-start: 3;
   grid-column-end: 12;
   grid-row-start: 2;
@@ -49,16 +46,16 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-}
 
-.miniTodoListItem input[type='checkbox']:disabled {
-  background-color: #fff;
-  color: #fff;
+  input[type='checkbox']:disabled {
+    background-color: #fff;
+    color: #fff;
 
-  margin: 0 8px 0 0;
-  padding: 0;
-}
+    margin: 0 8px 0 0;
+    padding: 0;
+  }
 
-.miniTodoListItem span {
-  vertical-align: top;
+  span {
+    vertical-align: top;
+  }
 }
