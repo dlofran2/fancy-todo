@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import './AddButton.css';
+import styles from './AddButton.scss';
 
 class AddButton extends Component {
   render() {
     const { text, onButtonClick } = this.props;
     return (
-      <div className="addButtonContainer">
-        <button className="addButton" onClick={onButtonClick}>
+      <div className={styles.container}>
+        <button className={styles.addButton} onClick={onButtonClick}>
           +
         </button>
-        <p className="addText">{text}</p>
+        <p className={styles.text}>{text}</p>
       </div>
     );
   }

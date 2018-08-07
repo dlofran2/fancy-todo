@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import Logo from '../../components/Logo';
 import RouteTitle from '../../components/RouteTitle';
@@ -7,7 +7,7 @@ import AddButton from '../../components/AddButton';
 import MiniTodoContainer from '../MiniTodoContainer';
 import NavBar from '../../components/NavBar';
 
-import './TaskListContainer.css';
+import styles from './TaskListContainer.scss';
 
 class TaskListContainer extends Component {
   addList = () => {
@@ -15,20 +15,20 @@ class TaskListContainer extends Component {
   };
   render() {
     return (
-      <section className="gridParent">
-        <div className="logoGridChild">
+      <section className={styles.gridParent}>
+        <div className={styles.logoGridChild}>
           <Logo />
         </div>
-        <div className="routeTitleGridChild">
+        <div className={styles.routeTitleGridChild}>
           <RouteTitle title={'Tasks Lists'} />
         </div>
-        <div className="addButtonGridChild">
+        <div className={styles.addButtonGridChild}>
           <AddButton text={'Add List'} onButtonClick={this.addList} />
         </div>
-        <div className="miniTodoContainerGridChild">
+        <div className={styles.miniTodoContainerGridChild}>
           <MiniTodoContainer />
         </div>
-        <div className="navBarGridChild">
+        <div className={styles.navBarGridChild}>
           <NavBar />
         </div>
       </section>

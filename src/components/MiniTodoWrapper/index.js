@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import MiniTodo from '../MiniTodo';
 
-import './MiniTodoWrapper.css';
+import styles from './MiniTodoWrapper.scss';
 
 class MiniTodoWrapper extends Component {
   render() {
     const { title, todos } = this.props;
     return (
-      <div className="miniTodoWrapperContainer">
+      <div className={styles.container}>
         <MiniTodo title={title} todos={todos} />
       </div>
     );
