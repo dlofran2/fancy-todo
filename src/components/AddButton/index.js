@@ -11,7 +11,7 @@ class AddButton extends Component {
         <button className={styles.addButton} onClick={onButtonClick}>
           +
         </button>
-        <p className={styles.text}>{text}</p>
+        {text && <p className={styles.text}>{text}</p>}
       </div>
     );
   }
