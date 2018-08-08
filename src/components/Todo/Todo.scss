@@ -1,0 +1,71 @@
+.todoItem {
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  list-style-type: none;
+  padding: 20px 0;
+
+  /* Customize the label (the container) */
+  .checkboxContainer {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox */
+  .checkboxContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    background-color: #fff;
+    border: 0.5px solid #ccc;
+    border-radius: 4px;
+
+    display: block;
+    height: 12px;
+    width: 12px;
+  }
+}
+
+.text {
+  grid-column-start: 3;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 1;
+
+  .item {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+  }
+
+  .date {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #ccc;
+
+    margin: 0;
+  }
+}
+
+.complete {
+  background-color: #eee;
+
+  .item {
+    text-decoration: line-through;
+  }
+}
