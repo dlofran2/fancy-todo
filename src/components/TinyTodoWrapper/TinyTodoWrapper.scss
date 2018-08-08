@@ -1,0 +1,23 @@
+.container {
+  width: auto;
+}
+
+.tinyTodo {
+  display: inline-block;
+
+  border: 1px solid dodgerblue;
+  border-radius: 3px;
+
+  width: 4px;
+  background-color: dodgerblue;
+
+  margin: 0 4px;
+}
+
+.active {
+  height: 24px;
+}
+
+.inactive {
+  height: 16px;
+}

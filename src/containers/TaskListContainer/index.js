@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
-import Logo from '../../components/Logo';
-import RouteTitle from '../../components/RouteTitle';
-import AddButton from '../../components/AddButton';
-import MiniTodoContainer from '../MiniTodoContainer';
-import NavBar from '../../components/NavBar';
+import Logo from 'components/Logo';
+import RouteTitle from 'components/RouteTitle';
+import AddButton from 'components/AddButton';
+import MiniTodoContainer from 'containers/MiniTodoContainer';
+import NavBar from 'components/NavBar';
 
 import styles from './TaskListContainer.scss';
 

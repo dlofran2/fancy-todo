@@ -1,4 +1,5 @@
 .container {
-  display: grid;
-  grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 440px;
+  overflow-x: hidden;
+  white-space: nowrap;
 }

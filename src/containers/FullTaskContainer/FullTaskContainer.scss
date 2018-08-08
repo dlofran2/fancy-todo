@@ -18,7 +18,7 @@
   grid-row-start: 1;
   grid-row-end: 1;
 
-  margin: 3em 2em 0 0;
+  margin: 4em 3em 0 0;
 }
 
 .titleGridChild {
@@ -26,6 +26,8 @@
   grid-column-end: 13;
   grid-row-start: 2;
   grid-row-end: 2;
+
+  margin: 4em 0 0 0;
 }
 
 .todoContainer {
@@ -33,18 +35,36 @@
   grid-column-end: 13;
   grid-row-start: 3;
   grid-row-end: 3;
+
+  margin: 1em 0 0 0;
 }
 
-.addContainer {
-  grid-column-start: 11;
-  grid-column-end: 13;
-  grid-row-start: 4;
-  grid-row-end: 4;
-}
+.addAndTinyTodoContainer {
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
-.tinyTodoContainer {
-  grid-column-start: 2;
-  grid-column-end: 8;
-  grid-row-start: 4;
-  grid-row-end: 4;
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  margin-bottom: 1em;
+
+  .addContainer {
+    grid-column-start: 8;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    margin-left: 2em;
+  }
+
+  .tinyTodoContainer {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    position: absolute;
+    bottom: 20px;
+  }
 }
