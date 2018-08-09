@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import styles from './MiniTodo.scss';
 
@@ -14,10 +15,10 @@ class MiniTodo extends Component {
     ));
 
     return (
-      <div className={styles.container}>
+      <Link to="/todo" className={styles.container}>
         <h2 className={styles.title}>{title}</h2>
         <ul className={styles.miniTodoList}>{todosList}</ul>
-      </div>
+      </Link>
     );
   }
 }

@@ -8,6 +8,8 @@
   display: grid;
   grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: fit-content(1%);
+
+  text-decoration: none;
 }
 
 .title {

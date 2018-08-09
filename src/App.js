@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-// import TaskListContainer from './containers/TaskListContainer';
+import { Switch, Route } from 'react-router-dom';
+
+import TaskListContainer from './containers/TaskListContainer';
 import FullTaskContainer from './containers/FullTaskContainer';
 
 class App extends Component {
   render() {
     return (
       <main>
-        {/* <TaskListContainer /> */}
-        <FullTaskContainer />
+        <Switch>
+          <Route exact path="/" component={TaskListContainer} />
+          <Route exact path="/todo" component={FullTaskContainer} />
+        </Switch>
       </main>
     );
   }
