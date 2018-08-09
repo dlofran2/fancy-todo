@@ -9,7 +9,7 @@
   grid-row-start: 1;
   grid-row-end: 1;
 
-  margin: 3em 0 0 2em;
+  margin: 4vh 0 0 3vh;
 }
 
 .closeGridChild {
@@ -18,7 +18,7 @@
   grid-row-start: 1;
   grid-row-end: 1;
 
-  margin: 4em 3em 0 0;
+  margin: 4vh 3vh 0 0;
 }
 
 .titleGridChild {
@@ -27,7 +27,7 @@
   grid-row-start: 2;
   grid-row-end: 2;
 
-  margin: 4em 0 0 0;
+  margin-top: 5vh;
 }
 
 .todoContainer {
@@ -47,7 +47,7 @@
   bottom: 0;
 
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: 3vh;
 
   .addContainer {
     grid-column-start: 8;
@@ -55,7 +55,7 @@
     grid-row-start: 1;
     grid-row-end: 1;
 
-    margin-left: 2em;
+    margin-left: 5vh;
   }
 
   .tinyTodoContainer {
@@ -65,6 +65,6 @@
     grid-row-end: 1;
 
     position: absolute;
-    bottom: 20px;
+    bottom: -0.3vh;
   }
 }

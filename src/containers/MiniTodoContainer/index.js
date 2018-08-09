@@ -13,6 +13,11 @@ class MiniTodoContainer extends Component {
       'get day off',
       'find hiking boots',
       'eat pie',
+      'add Erin to pass rider sasdasdasdasdasdasd',
+      'book SA tickets',
+      'get day off',
+      'find hiking boots',
+      'eat pie',
     ];
     return (
       <div className={styles.miniTodoContainerContainer}>
