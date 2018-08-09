@@ -1,9 +1,9 @@
 .container {
   background-color: dodgerblue;
   border: 1px solid dodgerblue;
-  border-radius: 6px;
-  height: 16em;
-  width: 10em;
+  border-radius: 10px;
+  height: 35vh;
+  width: 40vw;
 
   display: grid;
   grid-auto-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -14,14 +14,14 @@
 
 .title {
   color: #fff;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.2px;
   text-align: left;
 
-  padding-bottom: 15px;
-  margin: 30px 0 20px 0;
+  padding-bottom: 1.5vh;
+  margin: 4vh 0 1.5vh 0;
 
   border-bottom: 0.5px solid #e6e6e6;
 
@@ -40,11 +40,11 @@
 
 .miniTodoListItem {
   color: #fff;
-  font-size: 12px;
+  font-size: 0.8em;
   text-align: left;
   justify-content: center;
 
-  margin: 14px 0;
+  margin: 2.5vh 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -53,7 +53,7 @@
     background-color: #fff;
     color: #fff;
 
-    margin: 0 8px 0 0;
+    margin: 0 3vw 0 0;
     padding: 0;
   }
 

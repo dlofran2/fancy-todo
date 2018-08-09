@@ -12,7 +12,7 @@ import TinyTodoWrapper from 'components/TinyTodoWrapper';
 
 class FullTaskContainer extends Component {
   addNewList = () => {
-    console.log('adding new list');
+    console.log('adding new item to active list');
   };
 
   render() {

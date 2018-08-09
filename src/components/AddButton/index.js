@@ -7,7 +7,7 @@ class AddButton extends Component {
   render() {
     const { text, onButtonClick } = this.props;
     return (
-      <div className={styles.container}>
+      <div>
         <button className={styles.addButton} onClick={onButtonClick}>
           +
         </button>
