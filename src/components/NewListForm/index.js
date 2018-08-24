@@ -17,7 +17,12 @@ const renderField = ({
     meta: { touched, error }
 }) => (
         <div className={styles.completeInput}>
-            <input {...input} placeholder={placeholder} type={type} />
+            <input
+                {...input}
+                placeholder={placeholder}
+                type={type}
+                autocomplete="off"
+            />
             {touched &&
                 (error && <div className={styles.error}>{error}</div>)}
         </div>
