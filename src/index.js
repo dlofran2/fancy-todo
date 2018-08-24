@@ -7,12 +7,12 @@ import { Provider } from 'react-redux';
 
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import reducer from './redux';
+import rootReducer from './redux';
 
 import styles from './index.scss'; // eslint-disable-line
 
 let store = createStore(
-  reducer,
+  rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 

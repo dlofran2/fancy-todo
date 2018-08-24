@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 
+import NewListForm from 'components/NewListForm';
+
 import styles from './NewTodoModal.scss';
 
 class NewTodoModal extends Component {
@@ -10,18 +12,16 @@ class NewTodoModal extends Component {
     this.props.onToggleNewListModal(false);
   };
 
-  addList = () => {
-    this.props.onAddList({
-      title: 'Test',
-      todos: [
-        { item: '1', status: true, date: 'Apr 2, 2018' },
-        { item: '3', status: false, date: 'Apr 8, 2018' },
-        { item: '2', status: true },
-        { item: '4', status: false },
-      ],
-    });
+  addList = values => {
+    if (values && values.newListTitle) {
+      this.props.onAddList({
+        title: values.newListTitle,
+        todos: [
+        ],
+      });
 
-    this.toggleNewListModal();
+      this.toggleNewListModal();
+    }
   };
 
   render() {
@@ -34,6 +34,7 @@ class NewTodoModal extends Component {
             backgroundColor: 'rgba(225, 225, 225, 0.5)',
           },
           content: {
+            minHeight: '160px',
             height: '20%',
             width: '80%',
             position: 'absolute',
@@ -59,15 +60,9 @@ class NewTodoModal extends Component {
           <div
             className={classNames(styles.splitBorder, styles.splitBorderRight)}
           />
-          <form onSubmit={this.addList}>
-            <label>
-              <input placeholder="Todo list title" type="text" name="name" />
-            </label>
-            <div className={styles.buttonContainer}>
-              <button className={styles.standardButton} onClick={this.toggleNewListModal}>Cancel</button>
-              <button className={styles.standardButton} type="submit">Add new list</button>
-            </div>
-          </form>
+          <div className={styles.newTodoListForm}>
+            <NewListForm onSubmit={this.addList} onCancel={this.toggleNewListModal} />
+          </div>
         </div>
       </ReactModal>
     );

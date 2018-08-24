@@ -1,0 +1,88 @@
+.completeInput {
+    height: 42px;
+    width: 100%;
+}
+
+input[type=text] {  
+    display: block;
+    background-color: #fff;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+
+    height: 28px;
+    width: 191px;
+
+    padding-left: 8px;
+
+    &::placeholder {
+      color: #ccc;
+    }
+}
+
+input[type=text]:focus {
+  outline-color: #dcecfb;
+
+  &::placeholder {
+    color: #fff;
+    -webkit-transition: color 250ms linear;
+    -ms-transition: color 250ms linear;
+    transition: color 250ms linear;
+  }
+
+  .inputLabel {
+    color: #ccc;
+    -webkit-transition: color 250ms linear;
+    -ms-transition: color 250ms linear;
+    transition: color 250ms linear;
+  }
+}
+.standardButton {
+	background-color: #bddbfa;
+    border: 1px solid #dcecfb;
+    border-radius: 5px;
+
+    display: inline-block;
+
+    color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+    font-style: normal;
+  
+	height: 40px;
+	line-height: 40px;
+    width: 140px;
+  
+	text-decoration: none;
+	text-align: center;
+
+    margin: 26px 8px 0 0;
+    justify-content: center;
+
+    @media screen and (max-width: 390px) {
+        margin: 26px 4px 0 0;
+        width: 120px;
+    }
+
+    &Secondary {
+        background-color: #ccc;
+        border: 1px solid #ccc;
+    }
+}
+
+.standardButton:hover, .standardButton:active  {
+    outline-color: #dcecfb;
+    background-color: rgba(189,219,250, .8);
+}
+
+.standardButtonSecondary:hover, .standardButtonSecondary:active {
+    outline-color: #ccc;
+    background-color: rgba(204,204,204, .8);
+}
+
+.error {
+    color: #CD5C5C;
+    margin-top: 4px;
+
+    font-size: 12px;
+}

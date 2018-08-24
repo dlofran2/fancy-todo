@@ -25,7 +25,7 @@ MiniTodoContainer.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    lists: state.lists,
+    lists: state.app.lists,
   };
 };
 

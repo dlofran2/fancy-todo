@@ -54,7 +54,7 @@ TaskListContainer.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  newListModalStatus: state.newListModal,
+  newListModalStatus: state.app.newListModal,
 });
 
 const mapDispatchToProps = (dispatch) => ({
