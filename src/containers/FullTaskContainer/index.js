@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import styles from './FullTaskContainer.scss';
 
@@ -16,6 +17,14 @@ class FullTaskContainer extends Component {
   };
 
   render() {
+    const { lists } = this.props;
+    const currentList = 0;
+
+    if (lists.length === 0) {
+      this.props.history.push('/');
+      return null;
+    }
+
     return (
       <section className={styles.gridParent}>
         <div className={styles.logoGridChild}>
@@ -25,10 +34,14 @@ class FullTaskContainer extends Component {
           <Close />
         </div>
         <div className={styles.titleGridChild}>
-          <FullTaskTitle title={'Trip to YYC'} currentList={2} totalList={7} />
+          <FullTaskTitle
+            title={lists[currentList].title}
+            currentList={2}
+            totalList={7}
+          />
         </div>
         <div className={styles.todoContainer}>
-          <FullTodo />
+          <FullTodo todos={lists[currentList].todos} />
         </div>
         <div className={styles.addAndTinyTodoContainer}>
           <div className={styles.addContainer}>
@@ -43,6 +56,17 @@ class FullTaskContainer extends Component {
   }
 }
 
-FullTaskContainer.propTypes = {};
+FullTaskContainer.propTypes = {
+  lists: PropTypes.array.isRequired,
+};
 
-export default FullTaskContainer;
+const mapStateToProps = (state) => {
+  return {
+    lists: state.lists,
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null,
+)(FullTaskContainer);

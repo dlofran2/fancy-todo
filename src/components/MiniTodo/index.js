@@ -10,7 +10,7 @@ class MiniTodo extends Component {
     const todosList = todos.slice(0, 4).map((todo, idx) => (
       <li className={styles.miniTodoListItem} key={idx}>
         <input disabled type="checkbox" />
-        <span>{todo}</span>
+        <span>{todo.item}</span>
       </li>
     ));
 

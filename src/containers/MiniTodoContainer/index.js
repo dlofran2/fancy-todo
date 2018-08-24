@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import MiniTodoWrapper from '../../components/MiniTodoWrapper';
 
@@ -7,28 +8,28 @@ import styles from './MiniTodoContainer.scss';
 
 class MiniTodoContainer extends Component {
   render() {
-    const calgaryTodos = [
-      'add Erin to pass rider sasdasdasdasdasdasd',
-      'book SA tickets',
-      'get day off',
-      'find hiking boots',
-      'eat pie',
-      'add Erin to pass rider sasdasdasdasdasdasd',
-      'book SA tickets',
-      'get day off',
-      'find hiking boots',
-      'eat pie',
-    ];
-    return (
-      <div className={styles.miniTodoContainerContainer}>
-        <MiniTodoWrapper title={'Trip to YYC'} todos={calgaryTodos} />
-        <MiniTodoWrapper title={'Trip to YYC'} todos={calgaryTodos} />
-        <MiniTodoWrapper title={'Trip to YYC'} todos={calgaryTodos} />
-      </div>
-    );
+    const { lists } = this.props;
+    const todos = lists.map((list, idx) => {
+      return (
+        <MiniTodoWrapper key={idx} title={list.title} todos={list.todos} />
+      );
+    });
+
+    return <div className={styles.miniTodoContainerContainer}>{todos}</div>;
   }
 }
 
-MiniTodoContainer.propTypes = {};
+MiniTodoContainer.propTypes = {
+  lists: PropTypes.array.isRequired,
+};
 
-export default MiniTodoContainer;
+const mapStateToProps = (state) => {
+  return {
+    lists: state.lists,
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null,
+)(MiniTodoContainer);
