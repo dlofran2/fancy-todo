@@ -39,80 +39,22 @@
     grid-column-end: 13;
     grid-row-start: 1;
     grid-row-end: 1;
+
+    @media screen and (max-width: 390px) {
+      grid-column-start: 10;
+    }
+    
+    @media screen and (max-width: 335px) {
+      grid-column-start: 11;
+    }
   }
 }
 
-form {
+.newTodoListForm {
   grid-column-start: 1;
   grid-column-end: 13;
   grid-row-start: 2;
   grid-row-end: 2;
 
   margin: 26px auto;
-}
-
-input[type=text] {  
-    display: block;
-    background-color: #fff;
-    border: solid 1px #ccc;
-    border-radius: 5px;
-
-    height: 28px;
-    width: 191px;
-
-    padding-left: 8px;
-
-    &::placeholder {
-      color: #ccc;
-    }
-}
-
-input[type=text]:focus {
-  outline-color: #dcecfb;
-
-  &::placeholder {
-    color: #fff;
-    -webkit-transition: color 250ms linear;
-    -ms-transition: color 250ms linear;
-    transition: color 250ms linear;
-  }
-
-  .inputLabel {
-    color: #ccc;
-    -webkit-transition: color 250ms linear;
-    -ms-transition: color 250ms linear;
-    transition: color 250ms linear;
-  }
-}
-.standardButton {
-	-moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
-	-webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
-	box-shadow: inset 0px 1px 0px 0px #dcecfb;
-	background-color: #bddbfa;
-  border: 1px solid #dcecfb;
-  border-radius: 5px;
-
-  display: inline-block;
-
-  color: #ffffff;
-	font-family: Arial;
-	font-size: 15px;
-	font-weight: bold;
-  font-style: normal;
-  
-	height: 40px;
-	line-height: 40px;
-  width: 140px;
-  
-	text-decoration: none;
-	text-align: center;
-  text-shadow: 1px 1px 0px #528ecc;
-
-  margin: 26px 8px 0 0;
-  justify-content: center;
-}
-
-.standardButton:hover, .standardButton:active  {
-  outline-color: #dcecfb;
-  background-color: rgba(189,219,250, .8);
 }

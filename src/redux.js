@@ -1,8 +1,10 @@
 import { CREATE_LIST, DELETE_LIST, TOGGLE_NEW_LIST_MODAL } from './constants';
+import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
 
 const initialState = {
   lists: [],
-  newListModal: true,
+  newListModal: false,
 };
 
 function reducer(state = initialState, action) {
@@ -33,4 +35,10 @@ function reducer(state = initialState, action) {
   }
 }
 
-export default reducer;
+// Until the state/reducers become more complicated, leaving combine reducers here is fine
+const rootReducer = combineReducers({
+  app: reducer,
+  form: formReducer,
+});
+
+export default rootReducer;
