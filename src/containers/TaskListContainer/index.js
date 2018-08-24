@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import Logo from 'components/Logo';
 import RouteTitle from 'components/RouteTitle';
 import AddButton from 'components/AddButton';
 import MiniTodoContainer from 'containers/MiniTodoContainer';
 import NavBar from 'components/NavBar';
+import NewTodoModal from 'components/NewTodoModal';
+
+import { CREATE_LIST, TOGGLE_NEW_LIST_MODAL } from '../../constants';
 
 import styles from './TaskListContainer.scss';
 
 class TaskListContainer extends Component {
-  addList = () => {
-    console.log('were trying to add a list');
+  toggleNewListModal = () => {
+    this.props.onToggleNewListModal(true);
   };
+
   render() {
     return (
       <section className={styles.gridParent}>
@@ -23,7 +28,10 @@ class TaskListContainer extends Component {
           <RouteTitle title={'Tasks Lists'} />
         </div>
         <div className={styles.addButtonGridChild}>
-          <AddButton text={'Add List'} onButtonClick={this.addList} />
+          <AddButton
+            text={'Add List'}
+            onButtonClick={this.toggleNewListModal}
+          />
         </div>
         <div className={styles.miniTodoContainerGridChild}>
           <MiniTodoContainer />
@@ -31,11 +39,31 @@ class TaskListContainer extends Component {
         <div className={styles.navBarGridChild}>
           <NavBar />
         </div>
+        <NewTodoModal
+          isOpen={this.props.newListModalStatus}
+          onToggleNewListModal={this.props.onToggleNewListModal}
+          onAddList={this.props.addList}
+        />
       </section>
     );
   }
 }
 
-TaskListContainer.propTypes = {};
+TaskListContainer.propTypes = {
+  addList: PropTypes.func.isRequired,
+};
 
-export default TaskListContainer;
+const mapStateToProps = (state) => ({
+  newListModalStatus: state.newListModal,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  addList: (list) => dispatch({ type: CREATE_LIST, list }),
+  onToggleNewListModal: (status) =>
+    dispatch({ type: TOGGLE_NEW_LIST_MODAL, status }),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(TaskListContainer);
