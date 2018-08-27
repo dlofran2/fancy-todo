@@ -6,7 +6,7 @@ import styles from './MiniTodo.scss';
 
 class MiniTodo extends Component {
   render() {
-    const { title, todos } = this.props;
+    const { title, todos, id } = this.props;
     const todosList = todos.slice(0, 4).map((todo, idx) => (
       <li className={styles.miniTodoListItem} key={idx}>
         <input disabled type="checkbox" />
@@ -15,7 +15,7 @@ class MiniTodo extends Component {
     ));
 
     return (
-      <Link to="/todo" className={styles.container}>
+      <Link to={`/todo/${id}`} className={styles.container}>
         <h2 className={styles.title}>{title}</h2>
         <ul className={styles.miniTodoList}>{todosList}</ul>
       </Link>
@@ -26,6 +26,7 @@ class MiniTodo extends Component {
 MiniTodo.propTypes = {
   title: PropTypes.string.isRequired,
   todos: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default MiniTodo;

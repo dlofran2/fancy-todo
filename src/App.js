@@ -10,7 +10,7 @@ class App extends Component {
       <main>
         <Switch>
           <Route exact path="/" component={TaskListContainer} />
-          <Route exact path="/todo" component={FullTaskContainer} />
+          <Route exact path="/todo/:id" component={FullTaskContainer} />
         </Switch>
       </main>
     );

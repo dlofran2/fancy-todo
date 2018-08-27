@@ -2,6 +2,15 @@ import { CREATE_LIST, DELETE_LIST, TOGGLE_NEW_LIST_MODAL } from './constants';
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
+/*
+  list object: 
+  {
+    id: num,
+    title: string,
+    todos: [ string ]
+  }
+*/
+
 const initialState = {
   lists: [],
   newListModal: false,

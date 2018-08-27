@@ -13,11 +13,17 @@ class NewTodoModal extends Component {
   };
 
   addList = values => {
+    const { lists } = this.props;
     if (values && values.newListTitle) {
+      let id = 1;
+      if (lists && lists.length > 0) {
+        id = lists[lists.length - 1].id + 1;
+      }
+
       this.props.onAddList({
+        id,
         title: values.newListTitle,
-        todos: [
-        ],
+        todos: [],
       });
 
       this.toggleNewListModal();
@@ -73,6 +79,7 @@ NewTodoModal.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   onToggleNewListModal: PropTypes.func.isRequired,
   onAddList: PropTypes.func.isRequired,
+  lists: PropTypes.array.isRequired,
 };
 
 export default NewTodoModal;

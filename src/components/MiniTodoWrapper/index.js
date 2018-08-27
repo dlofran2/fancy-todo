@@ -7,10 +7,10 @@ import styles from './MiniTodoWrapper.scss';
 
 class MiniTodoWrapper extends Component {
   render() {
-    const { title, todos } = this.props;
+    const { title, todos, id } = this.props;
     return (
       <div className={styles.container}>
-        <MiniTodo title={title} todos={todos} />
+        <MiniTodo title={title} todos={todos} id={id} />
       </div>
     );
   }
@@ -19,6 +19,7 @@ class MiniTodoWrapper extends Component {
 MiniTodoWrapper.propTypes = {
   title: PropTypes.string.isRequired,
   todos: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default MiniTodoWrapper;
