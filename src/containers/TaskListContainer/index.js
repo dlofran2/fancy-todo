@@ -43,6 +43,7 @@ class TaskListContainer extends Component {
           isOpen={this.props.newListModalStatus}
           onToggleNewListModal={this.props.onToggleNewListModal}
           onAddList={this.props.addList}
+          lists={this.props.lists}
         />
       </section>
     );
@@ -51,10 +52,12 @@ class TaskListContainer extends Component {
 
 TaskListContainer.propTypes = {
   addList: PropTypes.func.isRequired,
+  lists: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   newListModalStatus: state.app.newListModal,
+  lists: state.app.lists,
 });
 
 const mapDispatchToProps = (dispatch) => ({

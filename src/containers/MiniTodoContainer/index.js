@@ -11,7 +11,12 @@ class MiniTodoContainer extends Component {
     const { lists } = this.props;
     const todos = lists.map((list, idx) => {
       return (
-        <MiniTodoWrapper key={idx} title={list.title} todos={list.todos} />
+        <MiniTodoWrapper
+          key={idx}
+          title={list.title}
+          todos={list.todos}
+          id={list.id}
+        />
       );
     });
 

@@ -10,7 +10,7 @@ class FullTaskTitle extends Component {
       <div className={styles.container}>
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.listNumber}>
-          {currentList} to {totalList} tasks
+          {currentList} of {totalList} tasks
         </h2>
         <div className={styles.separator} />
       </div>

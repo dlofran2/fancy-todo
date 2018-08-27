@@ -18,7 +18,7 @@ class FullTaskContainer extends Component {
 
   render() {
     const { lists } = this.props;
-    const currentList = 0;
+    const currentList = parseInt(this.props.match.params.id, 10);
 
     if (lists.length === 0) {
       this.props.history.push('/');
@@ -35,20 +35,23 @@ class FullTaskContainer extends Component {
         </div>
         <div className={styles.titleGridChild}>
           <FullTaskTitle
-            title={lists[currentList].title}
-            currentList={2}
-            totalList={7}
+            title={lists[currentList - 1].title}
+            currentList={currentList}
+            totalList={lists.length}
           />
         </div>
         <div className={styles.todoContainer}>
-          <FullTodo todos={lists[currentList].todos} />
+          <FullTodo todos={lists[currentList - 1].todos} />
         </div>
         <div className={styles.addAndTinyTodoContainer}>
           <div className={styles.addContainer}>
             <AddButton onButtonClick={this.addNewList} />
           </div>
           <div className={styles.tinyTodoContainer}>
-            <TinyTodoWrapper />
+            <TinyTodoWrapper
+              lists={lists}
+              currentList={currentList}
+            />
           </div>
         </div>
       </section>
